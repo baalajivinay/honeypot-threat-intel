@@ -90,7 +90,7 @@ honeypot-threat-intel/
 │   └── make-workflows/         # Exported Make.com scenario JSONs
 │
 ├── ai/
-│   └── groq_analyzer.py        # Local Ollama AI threat analyzer
+│   └── ollama_analyzer.py        # Local Ollama AI threat analyzer
 │
 ├── dashboard/
 │   ├── app.py                  # Flask web application
@@ -176,7 +176,7 @@ python3 app.py
 
 1. **Cowrie** listens on port 2222 and logs all SSH interactions to `cowrie.json`
 2. **log_parser.py** reads new entries, filters login events, saves to SQLite
-3. **groq_analyzer.py** sends the attack to local Ollama model for AI analysis
+3. **ollama_analyzer.py** sends the attack to local Ollama model for AI analysis
 4. **webhook_trigger.py** POSTs the attack payload to Make.com webhook
 5. **Make.com** calls AbuseIPDB API → sends Telegram alert
 6. **Flask dashboard** polls SQLite every 5 seconds and updates the UI
