@@ -4,7 +4,7 @@ sys.path.insert(0, '/home/vinay/honeypot-threat-intel/ai')
 from db_setup import init_db
 from log_parser import parse_logs
 from webhook_trigger import send_to_make
-from groq_analyzer import analyze_attack, get_latest_attack
+from ollama_analyzer import analyze_attack, get_latest_attack
 
 print("Starting pipeline...")
 init_db()
